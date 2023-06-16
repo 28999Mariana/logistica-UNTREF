@@ -1,0 +1,634 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Roboto:wght@300&display=swap');
+
+*{ 
+     margin:0;
+     padding: 0;
+     font-family:'Roboto', sans-serif;
+
+}
+
+nav{
+    display: flex;
+    z-index: 1;
+    position: absolute;
+    margin-top: 1%;
+    left:3.5%;
+    width: 800px;
+    height: 60px;
+    gap: 60px;
+    font-size: 18px;
+    font-family: 'Roboto', sans-serif;
+    background-color: black;
+    border-radius: 10px;
+    color:white;
+    display: row;
+    padding: 20px 230px;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.571);
+    text-decoration: none;
+    letter-spacing: 1px;
+}
+
+header nav a{
+    color:white;
+    text-decoration: none;
+}
+
+header nav a:hover{
+    color:rgba(145, 142, 142, 0.987);
+}
+
+.body-index{
+    background-image: url(../img/camion4-Mesaroli.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    
+}
+
+p{
+    font-size: 16px;
+}
+
+img{
+    padding-top: 9%;
+    padding-bottom: 3px;
+    padding-left: 3.5%;
+}
+
+h1{
+    padding-left: 38%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    letter-spacing: 2px;
+    border-radius: 8px;
+    width: 550px;
+    margin-left: 3.5%;
+    color:rgb(235, 10, 10);
+    font-size: 36px;
+    font-weight: 50%;
+    opacity: 6;
+    text-transform: uppercase;
+    background-color: white;
+}
+
+ul{
+    list-style: none;
+    align-items: none;
+    display:flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+main{
+    width: 600px;
+    height: 340px;
+    background-color: rgba(255, 255, 255, 0.82);
+    opacity: 7;
+    color:rgb(84, 83, 83);
+    padding: 8% 4%;
+    text-align: center;
+    z-index: 1;
+    position: absolute;
+    top:100%;
+    left:24%;
+    box-shadow: 0 5px 10px #000;
+    line-height: 35px;
+    font-size: 16px;
+    border-radius: 10px;
+
+}
+
+main p{
+    font-size: 16px;
+}
+
+h2{
+    padding-bottom: 14px;
+    padding-top: 40px;
+    border-top: 2px solid ;
+    border-bottom: 2px solid ;
+    color:rgb(50, 48, 48);
+    letter-spacing: 1px;
+    
+}
+
+main section h2{
+    padding-top: 3%;
+    margin-top: 0.5%;
+    
+}
+main section p{
+    color:rgb(50, 48, 48);
+    letter-spacing: 1px;
+    font-weight: 600;
+    padding-top: 8%;
+    padding-bottom: 30%;
+    font-size: 16px;
+}
+
+/* cards */
+.card-front h1{
+    color: white;
+    background-color: black;
+    font-size: 18px;
+    width: 290px;
+    margin-top: -125%;
+    padding-left: 2%;
+    transform: translateZ(60px);
+    letter-spacing: 3px;
+}
+.card-back h1{
+    color: black;
+    letter-spacing: 2px;
+    width: 240px;
+    font-weight: 2000;
+    font-size: 18px;
+    margin-top: 1%;
+    margin-left: 2%;
+    padding-left: 16%;
+}
+.card-back{
+    background-color: black;
+    border-radius: 10px;
+}
+
+.card-back p{
+    color:black;
+    font-weight: 800;
+    font-size: 16px;
+    padding:4%;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.card-back input{
+    margin-left: 4%;
+    margin-top: 3%;
+    border:none;
+    background-color: #000;
+    color:white;
+    width: 100px;
+    height: 30px;
+}
+
+.container-card{
+    max-width: 1200px;
+    position: absolute;
+    margin-top:1% ;
+    perspective: 1000px;
+    display:flex;
+    justify-content: center;
+    flex-wrap: wrap; /* hace responsive las cards */
+}
+.card-father{
+    margin:20px;
+    perspective: 1000px; /* importante para ver bien el giro con ese valor */
+}
+.card-father:hover .card{
+    transform:rotateY(180deg);
+}
+
+.card{
+    width: 350px;
+    height: 400px;
+    background: #746876;
+    border-radius: 10px;
+    position:relative; /* importante para posicionar luego card-back y card-front */
+    transform-style: preserve-3d;
+    transition:all 600ms;
+}
+.card1{
+    margin-left: -136%;
+}
+.card1 .card-front h1{
+    margin-left: 15%;
+}
+.card2{
+    margin-top: -125.5%;
+    margin-left: -9.5%;
+}
+.card2 .card-front h1{
+    margin-left: 8%;
+    margin-top: -120.6%;
+}
+
+.card3{
+    margin-left: 118%;
+    margin-top:-137% ;
+}
+.card3 .card-front h1{
+    margin-left: .6% ;
+    margin-top:-119.5% ;
+}
+
+.card-front{
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+.card-front img{
+    border-radius: 10px;
+}
+
+.card-front, .card-back{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top:0;
+    left:0;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+
+}
+
+.card-back{
+    transform:rotateY(180deg);
+    background: white;
+}
+
+.body-card-front{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 40px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color:white;
+    transform: translateZ(60px); /* efecto texto despegado */
+
+}
+
+.bg{
+    width: 100%;
+    height: 100%;
+    position:absolute;
+    top:0;
+    left:0;
+    background: rgba(0,0,0,0.4);
+}
+
+.body-card-back{
+    padding: 40px;
+    text-align: center;
+    transform: translateZ(60px);
+
+}
+
+.body-card-back p{
+    margin-top: 30px;
+    font-size: 18px;
+}
+
+.body-card-back input{
+    padding:10px 40px;
+    margin-top: 30px;
+    font-size: 16px;
+    cursor:pointer;
+    border:none; /* saca borde x defecto del input de html */
+    background: #58B0F6;
+    box-shadow: 1px 1px 30px -5px #58B0F6;
+    border-radius: 10px;
+    transition: box-shadow 600ms;
+    transform: translateZ(60px);
+}
+
+.body-card-back input:hover{
+    box-shadow: 1px 1px 30px 0px #449de6;
+}
+
+/* end cards */
+
+footer{
+    width: 1200px;
+    height: 400px;
+    background-color: rgba(128, 128, 128, 0.779);
+    color: white;
+    top:190%;
+    z-index: 1;
+    position: absolute;
+    padding: 3%;
+    border-radius: 10px;
+    margin-left: -46%;
+    box-shadow: 0 5px 10px #000; 
+    font-size: 16px;
+}
+.footer-2{
+    height: 280px;
+    margin-left: 2.4%;
+    margin-top: 6%;
+}
+
+footer p{
+    letter-spacing: 2px;
+}
+
+footer ul{
+    display:flex;
+    justify-content: space-around;
+    margin-left:2%;
+    padding-top: 2%;
+}
+
+.oficinas h3{
+    padding-top: 1%;
+    color:white;
+    border-top: none;
+    font-size: 18px;
+}
+
+.oficinas p{
+    color:white;
+}
+
+
+.footer-2 .oficinas p{
+    text-align: center;
+
+}
+
+.p-footer{
+    text-align: center;
+}
+.fa-linkedin-in{
+    font-size: 25px;
+    color:white;
+}
+.fa-linkedin-in:hover{
+    color:rgb(84, 83, 83);
+}
+.fa-facebook:hover{
+    color:rgb(84, 83, 83);
+}
+.fa-facebook{
+    font-size: 25px;
+    color:white;
+}
+.fa-twitter:hover{
+    color:rgb(84, 83, 83);
+}
+
+.fa-twitter{
+    font-size: 25px;
+    color:white;
+}
+
+h3{
+    text-align: center;
+    letter-spacing: 2px;
+    color:white;
+    border-bottom: 2px solid;
+    padding-bottom: 20px;
+    font-size: 18px;
+}
+
+.fa-warehouse{
+    margin-top: 25px;
+    color: white;
+    font-size: 40px;
+}
+.fa-warehouse:hover{
+    color:rgb(84, 83, 83);
+}
+
+
+.fa-truck-front{
+    margin-top: 25px;
+    color:white;
+    font-size:40px;
+}
+.fa-truck-front:hover{
+    color:rgb(84, 83, 83);
+}
+
+.fa-truck{
+    margin-top: 25px;
+    color:white;
+    font-size:40px ;
+}
+.fa-truck:hover{
+    color:rgb(84, 83, 83);
+}
+
+.fa-dolly{
+    margin-top:25px ;
+    color:white;
+    font-size: 40px;
+}
+.fa-dolly:hover{
+    color:rgb(84, 83, 83);
+}
+
+.fa-boxes-packing{
+    margin-top:25px;
+    color:white;
+    font-size: 40px;
+}
+.fa-boxes-packing:hover{
+    color:rgb(84, 83, 83);
+}
+
+
+
+.fa-whatsapp{
+    color:white;
+    font-size: 32px;
+    position: absolute;
+    left:86%;
+    top:24%;
+}
+.fa-whatsapp:hover{
+    color: rgb(84, 83, 83);
+}
+
+.h1-contacto{
+    background-color: #000;
+}
+
+.bloque1{
+    width:200px ;
+    height:150px ;
+    background-color: white;
+    text-align: center;
+    margin-top: 2.3%;
+}
+.bloque1 h4{
+    margin-top: 10px;
+    padding-bottom: 4%;
+    letter-spacing: 1px;
+    font-weight: 1000;
+    border-bottom: 2px solid;
+}
+.bloque2{
+    width:200px ;
+    height:150px ;
+    background-color: white;
+    text-align: center;
+    margin-top: 2.3%;
+}
+.bloque2 h4{
+    margin-top: 10px;
+    padding-bottom: 4%;
+    letter-spacing: 1px;
+    font-weight: 1000;
+    border-bottom: 2px solid;
+}
+.bloque3{
+    width:200px ;
+    height:150px ;
+    background-color: white;
+    text-align: center;
+    margin-top: 2.3%;    
+}
+
+.bloque3 h4{
+    margin-top: 10px;
+    padding-bottom: 4%;
+    letter-spacing: 1px;
+    font-weight: 1000;
+    border-bottom: 2px solid;
+}
+.fa-passport{
+    font-size: 75px;
+    color: grey;
+    padding-top: 9%;
+}
+.fa-business-time{
+    font-size: 65px;
+    color:grey;
+    padding-top:10%;
+    padding-left: 3%;
+}
+.fa-phone-volume{
+    font-size: 62px;
+    color: grey;
+    padding-top:12%;
+
+}
+
+.form-contact-2{
+    background-color: rgba(128, 128, 128, 0.098);
+    width: 700px;
+    height: 600px;
+    z-index: 1;
+    margin-left: 4%;
+    box-shadow: 0 5px 10px #000;
+    border-radius: 10px;
+    opacity: 7;
+    margin-top: -10%;
+}
+
+.form-contact-2 label{
+    color:white;
+    font-size: 17px;
+}
+.form2-animation{
+    position:absolute;
+    top:110%;
+    left:22%;
+}
+.h1-contacto{
+    background-color: white;
+    width: 1200px;
+    margin-left:2%;
+    border-radius: 10px;
+}
+
+
+.contact{
+    padding:8rem;
+    overflow: hidden;
+    color: white;
+    letter-spacing: 2px;
+}
+
+.contact label, .contact input, .contact textarea{
+    display:block;
+    width: 100%;
+    margin-bottom: 8px;
+}
+.contact label{
+    font-weight: 600;
+}
+
+.contact input:not([type='submit']), .contact textarea{
+    border:none;
+    border-bottom: 2px solid rgb(84, 83, 83);
+    margin-bottom: 10px;
+    font-size: 20px;
+    outline: none;
+    color:grey;
+}
+.contact textarea{
+    min-height: 100px;
+}
+
+input [type='submit']{
+    padding: 10px;
+    border:none;
+    background-color: white;
+    color: white;
+    font-size: 25px;
+    cursor:pointer;
+
+}
+
+button{
+    width: 445px;
+    height: 30px;
+    background-color: grey;
+    border:none;
+    color:white;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+.body-contacto{
+    background: url(../img/empleados-Mesaroli.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+
+.irAInicio{
+    position:absolute;
+    top:260%;
+    left:3%;
+    color:white;
+}
+.fa-angles-up{
+    color:black;
+    font-weight: 600;
+    font-size: 20px;
+    margin-left: 5000%;
+}
+
+.index-angles-up{
+    position:absolute;
+    top:183%;
+    left:2%;
+    z-index: 3;
+}
+.irAInicio .index-angles-up{
+    position: absolute;
+    top:300%;
+}
+
+
+
+
+    
+
+
+
+
+
+
+    
+
+
